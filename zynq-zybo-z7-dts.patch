@@ -1,0 +1,16 @@
+diff --git a/arch/arm/boot/dts/zynq-zybo-z7.dts b/arch/arm/boot/dts/zynq-zybo-z7.dts
+index 7b87e10d3953..5d62242019b2 100644
+--- a/arch/arm/boot/dts/zynq-zybo-z7.dts
++++ b/arch/arm/boot/dts/zynq-zybo-z7.dts
+@@ -36,6 +36,11 @@
+ 		compatible = "usb-nop-xceiv";
+ 		reset-gpios = <&gpio0 46 GPIO_ACTIVE_LOW>;
+ 	};
++
++	simple-axi-lite {
++		compatible = "simple-axi-lite-1.00";
++		reg = <0x043c30000 0x10000>;
++	};
+ };
+ 
+ &clkc {
